@@ -1,0 +1,121 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: rgba(211, 29, 29, 0.781);
+    }
+
+    #title {
+        color: aliceblue;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 900px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sub_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sub_container:not(:last-child) {
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.marked {
+    font-size: 4rem;
+}
+
+.placar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    box-shadow:
+    4.5px 5.2px 1.6px rgba(0, 0, 0, 0.483),
+    10.5px 12px 1.9px rgba(0, 0, 0, 0.569),
+    18.8px 21.6px 1.5px rgba(0, 0, 0, 0.604),
+    31.2px 35.8px 1.2px rgba(0, 0, 0, 0.617),
+    51.3px 59px 2.9px rgba(0, 0, 0, 0.619),
+    89.7px 103.1px 12.7px rgba(0, 0, 0, 0.616),
+    194px 223px 109px rgba(0, 0, 0, 0.61);
+}
+
+.placar_child {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    height: 150px;
+    width: 150px;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.button:hover {
+    background-color: #000000cb;
+}
+  
+.button:active {
+    background-color: #000000;
+    font-size: 16.2px;
+}
