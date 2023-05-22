@@ -15,29 +15,29 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 let lista_teclas = document.querySelectorAll('.sub_container');
-let currentPlayer = 'X';
-let primeiroJogador = 'X';
+let currentPlayer = 'X'; // Define o jogador atual como 'X'
+let primeiroJogador = 'X'; // Define o primeiro jogador como 'X'
 
 function marca(event) {
-  var teclaClicada = event.target;
+  var teclaClicada = event.target; // Obtém o elemento que foi clicado
 
   if (teclaClicada.textContent === '') {
     teclaClicada.innerHTML = `<h1 class='marked'>${currentPlayer}</h1>`;
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Alterna o jogador atual entre 'X' e 'O'
   } else {
     console.log('Nada acontece');
   }
 
   if (verificarVitoria()) {
     limparMarcas();
-    primeiroJogador = currentPlayer === 'X' ? 'O' : 'X';
-    currentPlayer = primeiroJogador;
+    primeiroJogador = currentPlayer === 'X' ? 'O' : 'X'; // Define o primeiro jogador como o próximo jogador (alternado)
+    currentPlayer = primeiroJogador; // Define o jogador atual como o primeiro jogador
   }
 }
 
 function limparMarcas() {
   lista_teclas.forEach((tecla) => {
-    tecla.innerHTML = '';
+    tecla.innerHTML = ''; // Limpa o conteúdo de cada elemento da lista
   });
 }
 
@@ -80,12 +80,9 @@ function verificarVitoria() {
 
 for (contador = 0; contador < lista_teclas.length; contador++) {
     let tecla = lista_teclas[contador];
-    tecla.addEventListener('click', marca);
+    tecla.addEventListener('click', marca);  // Adiciona um evento de clique em cada elemento da lista
 }
 
 let button = document.querySelector('.button');
-button.addEventListener('click', limparMarcas);
+button.addEventListener('click', limparMarcas); // Adiciona um ouvinte de evento de clique ao botão, que chama a função limparMarcas()
 
-
-
-  
