@@ -1,5 +1,5 @@
 ﻿# JOGO DA VELHA
-Esse é um jogo da velha para feito para treinar HTML, CSS e JavaScript.
+Esse é um jogo da velha para treinar feito em HTML, CSS e JavaScript.
 
 
 ## Print da tela:<br>
